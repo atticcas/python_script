@@ -36,10 +36,10 @@ def monitor():
 		try:
 			smtpObj = smtplib.SMTP('localhost')
 			smtpObj.sendmail(sender, receivers, message)
-			smtpObj.sendmail(sender,'5107096677', message)     
+			smtpObj.sendmail(sender,'5107096677@txt.att.net', message)     
 		   	print "Successfully sent email"
 		except SMTPException:
-		   print "Error: unable to send email"
+			print "Error: unable to send email"
 	except IOError: 
 	    pickle.dump( htmlString, open( 'old_status.html', "wb" ) )
 	    print('Created new file.')
